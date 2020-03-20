@@ -21,7 +21,8 @@ string to_string(int num,int dig)
 void generate()
 {
 	int n=rand()%maxn+1;
-	int m=rand()%maxn+1;
+	long long int maxedges=min(100000,n);
+	long long int m=rand()%maxedges+1;
 	out<<n<<" "<<m<<endl;
 	for(int i=1;i<=m;i++)
 	{

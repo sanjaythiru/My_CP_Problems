@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+const int maxn=1e5;
+const int maxval=1e5;
 string to_string(int num, int dig) {
 	string s = "";
 	for (int i = 0; i < dig; i++) {
@@ -15,17 +17,16 @@ vector<int> adj_list[maxn+1];
 const int max_test_files = 20;
 
 //test_specific contents
-const int maxn=1e5;
-const int maxval=1e5;
 void check()
 {
 	int n,m;
 	in>>n;
 	assert(n>=1);
 	assert(n<=maxn);
+	int maxedges=min(100000,n);
 	in>>m;
 	assert(m>=1);
-	assert(m<=maxn);
+	assert(m<=maxedges);
 	for (int i=1;i<=m;i++)
 	{
 		int u,v;
